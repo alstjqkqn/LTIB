@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTIB - Lunch Talk for Idea Building (KAIST)</title>
+    <style>
+        :root {
+            --primary: #004191; /* KAIST Blue */
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border: #e2e8f0;
+            --accent: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Member Grid */
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .member-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #f1f5f9;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .affiliation {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            margin-bottom: 0.75rem;
+        }
+
+        .field-tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            margin: 0.15rem;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            transition: background 0.2s;
+        }
+
+        .btn-link:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: #003375;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-sub);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="badge">KAIST Academic Group</div>
+        <h1>LTIB</h1>
+        <p>Lunch Talk for Idea Building — 점심 세미나를 통해 자유롭게 연구 아이디어를 공유하고 협업을 도모하는 학술 모임입니다.</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Members</h2>
+        
+        <div class="member-grid">
+            <!-- 멤버 1 -->
+            <div class="member-card">
+                <img class="avatar" src="https://via.placeholder.com/150" alt="홍길동">
+                <div class="name">홍길동 (Gildong Hong)</div>
+                <div class="affiliation">전산학부 / 박사과정</div>
+                <div>
+                    <span class="field-tag">LLM</span>
+                    <span class="field-tag">HCI</span>
+                    <span class="field-tag">AI Safety</span>
+                </div>
+                <div class="contact-links">
+                    <a href="https://example.com" target="_blank" class="btn-link btn-primary">Website</a>
+                    <a href="mailto:gildong@kaist.ac.kr" class="btn-link">Email</a>
+                </div>
+            </div>
+
+            <!-- 멤버 2 -->
+            <div class="member-card">
+                <img class="avatar" src="https://via.placeholder.com/150" alt="김카이">
+                <div class="name">김카이 (Kai Kim)</div>
+                <div class="affiliation">인공지능대학원 / 석사과정</div>
+                <div>
+                    <span class="field-tag">Computer Vision</span>
+                    <span class="field-tag">Robotics</span>
+                </div>
+                <div class="contact-links">
+                    <a href="https://scholar.google.com" target="_blank" class="btn-link btn-primary">Scholar</a>
+                    <a href="mailto:kai.kim@kaist.ac.kr" class="btn-link">Email</a>
+                </div>
+            </div>
+
+            <!-- 멤버 3 -->
+            <div class="member-card">
+                <img class="avatar" src="https://via.placeholder.com/150" alt="이스트">
+                <div class="name">이스트 (East Lee)</div>
+                <div class="affiliation">전기및전자공학부 / 석박통합</div>
+                <div>
+                    <span class="field-tag">Semiconductors</span>
+                    <span class="field-tag">Edge AI</span>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com" target="_blank" class="btn-link btn-primary">GitHub</a>
+                    <a href="mailto:east@kaist.ac.kr" class="btn-link">Email</a>
+                </div>
+            </div>
+            <!-- 새로운 멤버는 위의 <div class="member-card">...</div> 블록을 복사해 붙여넣으면 됩니다. -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 KAIST Lunch Talk for Idea Building (LTIB). All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
